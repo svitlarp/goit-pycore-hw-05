@@ -22,9 +22,10 @@ def caching_fibonacci():
     return fibonacci    
 
 # fibo variable is a link to fibonacci() because caching_fibonacci returns fibonacci object
-fibo = caching_fibonacci()
-print(fibo(6))
-print(fibo(4))
+fib = caching_fibonacci()
+
+print(fib(10))  # Виведе 55
+print(fib(15))  # Виведе 610
 
 # n = 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	...
 # xn =0	1	1	2	3	5	8	13	21	34	55	89	144	233	377	
