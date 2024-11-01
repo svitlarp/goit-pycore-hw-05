@@ -1,8 +1,9 @@
 import re
+import typing as t
 from typing import Callable
 
 
-def generator_numbers(text: str):
+def generator_numbers(text: str) -> t.Iterator[float]:
     '''This function stends to parse the text, identify all real numbers 
     considered to be part of the returns, and return them as a generator.'''
 
@@ -11,7 +12,7 @@ def generator_numbers(text: str):
         yield float(item.group())
 
 
-def sum_profit(text: str, func: Callable):
+def sum_profit(text: str, func: Callable) -> float:
     return sum(func(text))
 
 
